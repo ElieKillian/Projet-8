@@ -1,0 +1,10 @@
+.about{
+    margin : 0px 0px;
+
+    &__banner{
+        object-fit: cover;
+        height: 223px;
+        width: 100%;
+        border-radius: 25px;
+    }
+}

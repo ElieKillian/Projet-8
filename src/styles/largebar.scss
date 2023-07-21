@@ -1,0 +1,36 @@
+.bar{
+
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    gap : 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 1023px;
+
+    &__titlebar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 32px;
+        padding: 10px 15px;
+        border-radius: 10px;
+        background-color: #FF6060;
+        color : #FFFFFF;
+
+        &__arrow{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+            transform: rotate(180deg);
+        }
+    }
+
+    &__textbar{
+        margin : auto 20px;
+        color: #FF6060;
+    }
+}
