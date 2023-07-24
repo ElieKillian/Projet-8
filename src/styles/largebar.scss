@@ -19,18 +19,74 @@
         background-color: #FF6060;
         color : #FFFFFF;
 
-        &__arrow{
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            width: 32px;
-            height: 32px;
-            transform: rotate(180deg);
+        &__button{
+
+            background-color: #FF6060;
+            visibility: hidden;
+
+            &__toparrow{
+                visibility:visible;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                width: 32px;
+                height: 32px;
+                transform: rotate(180deg);
+                animation : rotationenhaut 0.5s backwards;
+
+                @keyframes rotationenhaut{
+                    from{
+                        transform: rotate(0deg);
+                    }
+                    to{
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+            &__bottomarrow{
+                visibility:visible;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                width: 32px;
+                height: 32px;
+                animation : rotationenbas 0.5s backwards;
+
+                @keyframes rotationenbas{
+                    from{
+                        transform: rotate(180deg);
+                    }
+                    to{
+                        transform: rotate(0deg);
+                    }
+                }
+            }
         }
     }
 
     &__textbar{
-        margin : auto 20px;
-        color: #FF6060;
+
+        animation : translation 1s backwards;
+        width: 1023px;
+
+        @keyframes translation{
+            0%{
+                height: 0%;
+            }
+            33%{
+                height: 30%;
+            }
+            66%{
+                height: 60%;
+            }
+            100%{
+                height: 100%;
+            }
+        };
+
+        &__text{
+            align-items: center;   
+            color: #FF6060;
+        }
     }
 }

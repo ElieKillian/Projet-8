@@ -1,6 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 body{
         display: flex;
         justify-content: center;
         margin : 0px;
         width: 100%;
+}
+
+.error{
+
+        font-family: Montserrat;
+        color: #FF6060;
+
+        &__404{
+                display: flex;
+                justify-content: center;
+                margin : 0px;
+                font-weight: 700;
+                font-size: 288px;
+                line-height: 410px;
+        }
+        &__text{
+                display: flex;
+                justify-content: center;
+                font-weight: 500;
+                font-size: 36px;
+                line-height: 51px;
+        }
+        &__link{ 
+                display: flex;
+                justify-content: center;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 25px;
+        }
 }
