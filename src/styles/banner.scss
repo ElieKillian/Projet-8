@@ -1,0 +1,41 @@
+.banner{
+
+    position: relative;
+    
+    &__img{
+        position: relative;
+        object-fit: cover;
+        height: 223px;
+        width: 1240px;
+        margin: 0px 100px;
+        border-radius: 25px;
+
+    }
+
+
+    &__mask{
+
+        position: absolute;
+        background-color: #000000;
+        top : 0;
+        left : 0;
+        opacity: 30%;
+        height: 223px;
+        width: 1240px;
+        margin: 0px 100px;
+        border-radius: 25px;
+
+        &__text{
+            
+            position: absolute;
+            top : 20%;
+            left : 20%;
+
+            font-family: Montserrat;
+            font-weight: 500;
+            font-size: 48px;
+            line-height: 68px;
+            color: #FFFFFF;
+        }
+    }
+}

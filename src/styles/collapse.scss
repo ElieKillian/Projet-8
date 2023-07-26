@@ -1,13 +1,11 @@
 .bar{
 
-    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    gap : 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 1023px;
+    justify-content: space-between;
+    width: 100%;
 
     &__titlebar{
         display: flex;
@@ -15,11 +13,11 @@
         align-items: center;
         height: 32px;
         padding: 10px 15px;
-        border-radius: 10px;
+        border-radius: 5px;
         background-color: #FF6060;
         color : #FFFFFF;
 
-        &__button{
+        &__toggle{
 
             background-color: #FF6060;
             visibility: hidden;
@@ -64,29 +62,46 @@
         }
     }
 
-    &__textbar{
-
-        animation : translation 1s backwards;
-        width: 1023px;
-
-        @keyframes translation{
-            0%{
-                height: 0%;
+    &__texthide{
+           
+        animation : hidetext 0.5s backwards ease-in-out;
+            
+        @keyframes hidetext {
+            from{
+                max-height: 500px;
             }
-            33%{
-                height: 30%;
+            to{
+                max-height: 0px;
             }
-            66%{
-                height: 60%;
-            }
-            100%{
-                height: 100%;
-            }
-        };
+        }
 
         &__text{
-            align-items: center;   
+            display: none;
+        }
+    }
+        
+    &__textshow{
+
+        width: 100%;
+        border-radius: 0px 0px 5px 5px;
+        margin-top: -5px;
+        background-color: #F6F6F6;
+        animation : showtext 0.5s forwards ease-in-out;
+        z-index: -1;
+
+        @keyframes showtext {
+            from{
+                    max-height: 0;
+            }
+            to{
+                    max-height: 500px;
+            }                
+        }
+
+        &__text{
             color: #FF6060;
+            margin-left: 20px;
+            margin-right: 20px;
         }
     }
 }
