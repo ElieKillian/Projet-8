@@ -1,107 +1,120 @@
 .bar{
 
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
 
     &__titlebar{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 32px;
-        padding: 10px 15px;
-        border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 32px;
+      padding: 10px 15px;
+      border-radius: 5px;
+      background-color: #FF6060;
+      color : #FFFFFF;
+
+      &__toggle{
+
         background-color: #FF6060;
-        color : #FFFFFF;
+        visibility: hidden;
 
-        &__toggle{
+        &__toparrow{
+          visibility:visible;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          width: 32px;
+          height: 32px;
+          transform: rotate(180deg);
+          animation : rotationenhaut 0.5s backwards;
 
-            background-color: #FF6060;
-            visibility: hidden;
-
-            &__toparrow{
-                visibility:visible;
-                display: flex;
-                align-items: center;
-                cursor: pointer;
-                width: 32px;
-                height: 32px;
-                transform: rotate(180deg);
-                animation : rotationenhaut 0.5s backwards;
-
-                @keyframes rotationenhaut{
-                    from{
-                        transform: rotate(0deg);
-                    }
-                    to{
-                        transform: rotate(180deg);
-                    }
-                }
+          @keyframes rotationenhaut{
+            from{
+              transform: rotate(0deg);
             }
-            &__bottomarrow{
-                visibility:visible;
-                display: flex;
-                align-items: center;
-                cursor: pointer;
-                width: 32px;
-                height: 32px;
-                animation : rotationenbas 0.5s backwards;
-
-                @keyframes rotationenbas{
-                    from{
-                        transform: rotate(180deg);
-                    }
-                    to{
-                        transform: rotate(0deg);
-                    }
-                }
+            to{
+              transform: rotate(180deg);
             }
+          }
         }
+        &__bottomarrow{
+          visibility:visible;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          width: 32px;
+          height: 32px;
+          animation : rotationenbas 0.5s backwards;
+
+          @keyframes rotationenbas{
+            from{
+              transform: rotate(180deg);
+            }
+            to{
+              transform: rotate(0deg);
+            }
+          }
+        }
+      }
     }
 
     &__texthide{
-           
-        animation : hidetext 0.5s backwards ease-in-out;
-            
-        @keyframes hidetext {
-            from{
-                max-height: 500px;
-            }
-            to{
-                max-height: 0px;
-            }
-        }
 
-        &__text{
-            display: none;
-        }
+      max-height: 0;
+      overflow: hidden;
+      margin-top: -5px;
+      padding: 0px 10px;
+      background-color: #F6F6F6;
+      border-radius: 0 0 5px 5px;
+      animation: hideText 0.5s forwards; 
+      font-family: Montserrat;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 26px;
+      letter-spacing: 0em;
+      text-align: left;     
+      color: #FF6060;   
+      z-index: -1;
     }
         
     &__textshow{
 
-        width: 100%;
-        border-radius: 0px 0px 5px 5px;
-        margin-top: -5px;
-        background-color: #F6F6F6;
-        animation : showtext 0.5s forwards ease-in-out;
-        z-index: -1;
-
-        @keyframes showtext {
-            from{
-                    max-height: 0;
-            }
-            to{
-                    max-height: 500px;
-            }                
-        }
-
-        &__text{
-            color: #FF6060;
-            margin-left: 20px;
-            margin-right: 20px;
-        }
+      max-height: 500px;
+      overflow: hidden;
+      margin-top: -5px;
+      padding: 0px 10px;
+      border-radius: 0px 0px 5px 5px;
+      background-color: #F6F6F6;    
+      animation: showText 0.5s forwards; 
+      font-family: Montserrat;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 26px;
+      letter-spacing: 0em;
+      text-align: left;     
+      color: #FF6060;   
+      z-index: -1;
     }
 }
+
+  @keyframes hideText {
+    from {
+      max-height: 500px;
+    }
+    to {
+      max-height: 0;
+    }
+  }
+
+  @keyframes showText {
+    from {
+      max-height: 0;
+    }
+    to {
+      max-height: 500px;
+    }
+  }

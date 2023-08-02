@@ -1,0 +1,30 @@
+.tags{
+
+    display: flex;
+    gap : 20px;
+
+    &__bar{
+        width: auto;
+        border-radius: 10px;
+        background-color: #FF6060;
+
+        &__content{
+            width: auto;
+            white-space: nowrap;
+            padding-left: 20px;
+            padding-right: 20px;
+            height: 25px;
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #FFFFFF;
+            font-family: Montserrat;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+    }
+}

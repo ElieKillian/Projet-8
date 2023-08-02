@@ -1,0 +1,13 @@
+.rating{
+
+    margin-top: 25px;
+
+
+    &__stars{
+
+        display: flex;
+        justify-content: flex-end;
+        gap : 20px;
+
+    }
+}

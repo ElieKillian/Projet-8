@@ -1,0 +1,48 @@
+.gallery{
+    &__container{
+        width: 100%;
+        height: 415px;
+        
+        &__banner{
+            object-fit: cover;
+            height: 415px;
+            width: 1240px;
+            margin : 0px 100px;
+            border-radius: 25px;
+            z-index: -1;
+        }
+
+        &__items{
+
+            position: relative;
+
+            &__left{
+                position: absolute;
+                top : 150px;
+                left : 7%;
+                cursor: pointer;
+            }
+
+            &__right{
+                position: absolute;
+                top : 150px;
+                right : 7%;
+                cursor: pointer;
+            }
+
+            &__slides{
+                position: absolute;
+                top : 380px;
+                left: 50%;
+                font-family: Montserrat;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 26px;
+                letter-spacing: 0em;
+                text-align: center;
+                color: #FFFFFF;
+            }
+        }
+    }
+}
+
