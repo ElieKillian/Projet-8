@@ -1,10 +1,13 @@
 .home{
 
+    width: 100%;
+
     &__grid{
         display: grid;
         justify-content: center;
         grid-template-columns: 1fr 1fr 1fr;
         margin : 40px 160px; 
+        // 160px
         gap: 50px;
 
         &__card{
