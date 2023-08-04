@@ -8,7 +8,7 @@ function Banner({className}) {
 if (className === "home__banner"){
     return (
         <div className='banner'>
-            <img src= {Imghome} alt='Bord de mer' className='banner__img' />
+            <img src= {Imghome} alt='Bord de mer' className='banner__imghome' />
             <div className='banner__mask'>
                 <p className='banner__mask__text'>Chez vous, partout et ailleurs</p>   
             </div> 
@@ -19,7 +19,7 @@ if (className === "home__banner"){
 if (className === "about__banner"){
     return (
         <div className='banner'>
-            <img src= {ImgAbout} alt='Montagne' className='banner__img' />     
+            <img src= {ImgAbout} alt='Montagne' className='banner__imgabout' />     
         </div>
       )
 };

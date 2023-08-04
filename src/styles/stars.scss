@@ -2,12 +2,19 @@
 
     margin-top: 25px;
 
-
     &__stars{
 
         display: flex;
         justify-content: flex-end;
         gap : 20px;
+
+        @media all and (max-width : 720px) {
+            justify-content: flex-start;
+            flex-direction: row;
+            height: 18px;
+            width: 18px;
+            gap: 10px;
+        }
 
     }
 }

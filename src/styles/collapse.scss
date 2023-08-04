@@ -14,8 +14,21 @@
       height: 32px;
       padding: 10px 15px;
       border-radius: 5px;
+      font-family: Montserrat;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 34px;
+      letter-spacing: 0em;
+      text-align: left;
       background-color: #FF6060;
       color : #FFFFFF;
+
+      @media all and (max-width: 720px){
+        height: 10px;
+        padding: 10px 15px;
+        font-size: 13px;
+        line-height: 19px;
+      }
 
       &__toggle{
 
@@ -27,10 +40,15 @@
           display: flex;
           align-items: center;
           cursor: pointer;
-          width: 32px;
-          height: 32px;
+          width: 24px;
+          height: 13px;
           transform: rotate(180deg);
           animation : rotationenhaut 0.5s backwards;
+
+          @media all and (max-width : 720px) {
+            width: 16px;
+            height: 9px;
+          }
 
           @keyframes rotationenhaut{
             from{
@@ -46,9 +64,14 @@
           display: flex;
           align-items: center;
           cursor: pointer;
-          width: 32px;
-          height: 32px;
+          width: 24px;
+          height: 13px;
           animation : rotationenbas 0.5s backwards;
+
+          @media all and (max-width : 720px) {
+            width: 16px;
+            height: 9px;
+          }
 
           @keyframes rotationenbas{
             from{
@@ -79,6 +102,11 @@
       text-align: left;     
       color: #FF6060;   
       z-index: -1;
+
+      @media all and (max-width : 720px) {
+        font-size: 12px;
+        line-height: 17px;
+      }
     }
         
     &__textshow{
@@ -98,6 +126,11 @@
       text-align: left;     
       color: #FF6060;   
       z-index: -1;
+
+      @media all and (max-width : 720px) {
+        font-size: 12px;
+        line-height: 17px;
+      }
     }
 }
 

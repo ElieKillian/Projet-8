@@ -5,6 +5,10 @@
     margin-top: 15px;
     gap: 10px;
 
+    @media all and (max-width : 720px) {
+        margin-top: 20px;
+    }
+
     &__name{
         display: flex;
         align-items: center;
@@ -17,11 +21,23 @@
         letter-spacing: 0em;
         text-align: right;
         color: #FF6060;
+
+        @media all and (max-width : 720px) {
+            width: 50px;
+            font-size: 12px;
+            line-height: 17px;
+        }
     }
 
     &__picture{
         width: 64px;
         height: 64px;
         border-radius: 32px;
+
+        @media all and (max-width : 720px) {
+            width: 32px;
+            height: 32px;
+            border-radius: 16px;
+        }
     }
 }

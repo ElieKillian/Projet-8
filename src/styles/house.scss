@@ -6,9 +6,17 @@
         display: flex;
         justify-content: center;
 
+        @media all and (max-width: 720px){
+            flex-direction: column;
+        }
+
         &__left{
-            width: 50%;
-            margin-left: 100px;
+            width: 43%;
+            margin-left: 7%;
+
+            @media all and (max-width : 720px) {
+                width: 86%;
+            }
 
             &__title{
                 margin-top: 20px;
@@ -20,6 +28,11 @@
                 letter-spacing: 0em;
                 text-align: left;
                 color:#FF6060;
+
+                @media all and (max-width: 720px){
+                    font-size: 18px;
+                    line-height: 26px;
+                }
             }
 
             &__location{
@@ -32,20 +45,34 @@
                 letter-spacing: 0em;
                 text-align: left;
                 color:#FF6060;
+
+                @media all and (max-width: 720px){
+                    font-size: 14px;                    
+                    line-height: 20px;
+                }
             }   
         }
 
         &__right{
-            width: 50%;
-            margin-right: 100px;
+            width: 43%;
+            margin-right: 7%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+
+            @media all and (max-width : 720px) {
+                width: 86%;
+                margin : 0 7%;
+                flex-direction: row-reverse;      
+            }
         }
     }
 
     &__bottom{
         display: flex;
         justify-content: space-between;
-        margin: 20px 100px 40px;
-        gap : 76px;
+        margin: 20px 0 40px; //100px
+        gap : 5.28%; //76px
         font-family: Montserrat;
         font-size: 18px;
         font-weight: 500;
@@ -53,12 +80,29 @@
         letter-spacing: 0em;
         text-align: left;
 
+        @media all and (max-width: 720px){
+            flex-direction: column;
+            gap : 20px;
+        }
+
         &__left{
-            width: 582px;
+            margin-left: 7%;
+            width: 40.47%;
+
+            @media all and (max-width : 720px) {
+                width: 86%;
+                margin: 0 7%;
+            }
         }
 
         &__right{
-            width: 582px;
+            margin-right: 7%;
+            width: 40.47%;
+
+            @media all and (max-width : 720px) {
+                width: 86%;
+                margin: 0 7%;
+            }
         }
     }
 }

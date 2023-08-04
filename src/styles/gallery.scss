@@ -2,14 +2,23 @@
     &__container{
         width: 100%;
         height: 415px;
+
+        @media all and (max-width: 720px){
+            height: 255px;       
+        }
         
         &__banner{
             object-fit: cover;
             height: 415px;
-            width: 1240px;
-            margin : 0px 100px;
+            width: 86%;
+            margin : 0px 7%;
             border-radius: 25px;
             z-index: -1;
+
+            @media all and (max-width: 720px){
+                height: 255px;       
+                border-radius: 10px;
+            }
         }
 
         &__items{
@@ -21,6 +30,12 @@
                 top : 150px;
                 left : 7%;
                 cursor: pointer;
+
+                @media all and (max-width: 720px){
+                    top : 120px;
+                    width: 24px;
+                    height: 24px;
+                }
             }
 
             &__right{
@@ -28,6 +43,12 @@
                 top : 150px;
                 right : 7%;
                 cursor: pointer;
+
+                @media all and (max-width: 720px){
+                    top : 120px;
+                    width: 24px;
+                    height: 24px;
+                }
             }
 
             &__slides{
@@ -41,6 +62,10 @@
                 letter-spacing: 0em;
                 text-align: center;
                 color: #FFFFFF;
+
+                @media all and (max-width : 720px){
+                    display: none;
+                }
             }
         }
     }

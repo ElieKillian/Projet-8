@@ -3,10 +3,22 @@
     display: flex;
     gap : 20px;
 
+    @media all and (max-width : 720px) {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
     &__bar{
         width: auto;
         border-radius: 10px;
         background-color: #FF6060;
+
+        @media all and (max-width : 720px) {
+            height: 18px;
+            font-size: 10px;
+            line-height: 14px;
+            border-radius: 5px;
+        }
 
         &__content{
             width: auto;
@@ -25,6 +37,12 @@
             line-height: 20px;
             letter-spacing: 0em;
             text-align: left;
+
+            @media all and (max-width : 720px) {  
+                height: 18px;
+                font-size: 10px;
+                line-height: 14px;
+            }
         }
     }
 }
