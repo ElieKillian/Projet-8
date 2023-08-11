@@ -1,0 +1,50 @@
+.error{
+
+    font-family: Montserrat;
+    color: #FF6060;
+    width: 100vw;
+
+    &__404{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+            font-weight: 700;
+            font-size: 288px;
+            line-height: 410px;
+
+            @media all and (max-width : 720px){
+                    font-size : 96px;
+                    line-height: 137px;
+            }
+    }
+    &__text{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            text-align: center;
+            margin : 0px 10% 40px;
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 51px;
+
+            @media all and (max-width : 720px){
+                    font-size : 18px;
+                    line-height: 26px;
+            }
+    }
+    &__link{ 
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 25px;
+
+            @media all and (max-width : 720px){
+                    font-size : 14px;
+                    line-height: 20px;
+            }
+    }
+}

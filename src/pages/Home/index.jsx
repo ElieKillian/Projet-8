@@ -4,6 +4,9 @@ import data from '../../logements.json';
 import { Link } from 'react-router-dom';
 
 function Home() {
+
+  document.title = 'Kasa - Accueil';
+
   return (
     <div className='home'>
       <Banner className='home__banner' />

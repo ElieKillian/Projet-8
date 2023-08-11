@@ -4,6 +4,9 @@ import Banner from '../../components/banner';
 import Collapse from '../../components/collapse';
 
 function Propos() {
+
+  document.title = 'Kasa - A propos';
+
   return (
     <div className='about'>
       <Banner className='about__banner' />

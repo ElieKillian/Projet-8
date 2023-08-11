@@ -11,6 +11,8 @@ import Notfound from '../../components/Notfound';
 
 function House() {
 
+  document.title = 'Kasa - Logement';
+
   const { id } = useParams();
 
   const page = data.find((item) => item.id === id);

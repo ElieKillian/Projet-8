@@ -25,7 +25,7 @@ function Header() {
         <nav className='header__nav'>
             <Link to="/" className='header__nav__link'>Accueil</Link>
             <Link to="/a-propos" className='header__nav__link'>A propos</Link>
-        </nav>
+          </nav>
       </header>
     )
 };
