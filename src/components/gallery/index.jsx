@@ -4,10 +4,9 @@ import data from '../../logements.json';
 import Arrowleft from './arrow_back_ios-24px 1.png';
 import Arrowright from './arrow_forward_ios-24px 1.png';
 
-function Gallery({idCurrentItem}) {
+function Gallery({item}) {
 
     const [currentSlide, setCurrentSlide] = useState(0);
-    const item = data.find((item) => item.id === idCurrentItem);
 
     function updateSlide (i){
         setCurrentSlide(i);
