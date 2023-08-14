@@ -25,7 +25,7 @@ function House() {
 
   return (
       <div className='house'>
-        <Gallery item={page} />
+        <Gallery content={page.pictures} />
         <div className='house__content'>
           <div className='house__content__left'>
             <h2 className='house__content__left__title' >{page.title}</h2>  
