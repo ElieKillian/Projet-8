@@ -3,12 +3,14 @@
     font-family: Montserrat;
     color: #FF6060;
     width: 100vw;
+    max-width: 1440px;
+
 
     &__404{
             display: flex;
             justify-content: center;
             text-align: center;
-            margin: 0 auto;
+            margin: 0;
             font-weight: 700;
             font-size: 288px;
             line-height: 410px;
