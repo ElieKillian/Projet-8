@@ -1,20 +1,15 @@
 import React from 'react';
-import data from '../../logements.json';
 import '../../styles/host.scss';
 
-function Host({idCurrentItem}){
+function Host(props){
     return (
-        <div>
-            {data.map((item) => (
-                item.id === idCurrentItem ? (
-                    <div className='host' key={item.id}>
-                        <p className='host__name'>{item.host.name}</p>
-                        <img src={item.host.picture} alt='owner' className='host__picture'/>
-                    </div>
-                ) : null
-            ))}
+        <div className='host'>
+            <p className='host__name'>{props.content.name}</p>
+            <img src={props.content.picture} alt='owner' className='host__picture'/>
         </div>
       );
 } 
 
 export default Host
+
+// key={props.id}

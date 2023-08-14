@@ -4,9 +4,9 @@ import '../../styles/tags.scss';
 function Tag(props) {
 
   return (
-    <div key={props.tag} className="tags__bar" >
+    <div className="tags__bar" >
         <p className="tags__bar__content" >
-            {props.tag} 
+            {props.content} 
         </p>
     </div>
   );

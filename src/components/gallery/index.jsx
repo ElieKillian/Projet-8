@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import '../../styles/gallery.scss';
-import data from '../../logements.json';
 import Arrowleft from './arrow_back_ios-24px 1.png';
 import Arrowright from './arrow_forward_ios-24px 1.png';
 

@@ -29,15 +29,15 @@ function House() {
         <div className='house__content'>
           <div className='house__content__left'>
             <h2 className='house__content__left__title' >{page.title}</h2>  
-            <p className='house__content__left__location' >{page.location}</p>  
+            <p className='house__content__left__location'>{page.location}</p>  
             <div className='tags'>
               {tags.map((element) => 
-                <Tag tag={element}  />
+                <Tag content={element}  />
               )}
             </div>
           </div>
           <div className='house__content__right'>
-            <Host idCurrentItem={id} />
+            <Host content={page.host} />
             <Stars idCurrentItem={id} />
           </div>   
         </div>     
