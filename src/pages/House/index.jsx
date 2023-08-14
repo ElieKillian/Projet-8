@@ -3,7 +3,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import Gallery from '../../components/gallery';
 import data from '../../logements.json';
-import Tags from '../../components/tags';
+import Tag from '../../components/tag';
 import Host from '../../components/host';
 import Stars from '../../components/stars';
 import Collapse from '../../components/collapse';
@@ -17,6 +17,8 @@ function House() {
 
   const page = data.find((item) => item.id === id);
 
+  const tags = page.tags;
+
   if(!page){
     return <Notfound />;
   }
@@ -28,7 +30,11 @@ function House() {
           <div className='house__content__left'>
             <h2 className='house__content__left__title' >{page.title}</h2>  
             <p className='house__content__left__location' >{page.location}</p>  
-            <Tags idCurrentItem={id}  />
+            <div className='tags'>
+              {tags.map((element) => 
+                <Tag tag={element}  />
+              )}
+            </div>
           </div>
           <div className='house__content__right'>
             <Host idCurrentItem={id} />
