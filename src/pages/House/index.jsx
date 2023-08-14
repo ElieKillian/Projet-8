@@ -38,7 +38,7 @@ function House() {
           </div>
           <div className='house__content__right'>
             <Host content={page.host} />
-            <Stars idCurrentItem={id} />
+            <Stars content={page.rating} />
           </div>   
         </div>     
         <div className='house__bottom'>
