@@ -3,9 +3,9 @@ import Imghome from './Image source 1.png';
 import ImgAbout from './bannerabout.png';
 
 
-function Banner({className}) {
+function Banner(props) {
 
-if (className === "home__banner"){
+if (props.className === "home__banner"){
     return (
         <div className='banner'>
             <img src= {Imghome} alt='Bord de mer' className='banner__imghome' />
@@ -16,7 +16,7 @@ if (className === "home__banner"){
       )
 };
 
-if (className === "about__banner"){
+if (props.className === "about__banner"){
     return (
         <div className='banner'>
             <img src= {ImgAbout} alt='Montagne' className='banner__imgabout' />     
