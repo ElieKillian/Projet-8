@@ -1,8 +1,8 @@
 import '../../styles/house.scss';
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import Gallery from '../../components/gallery';
-import data from '../../logements.json';
 import Tag from '../../components/tag';
 import Host from '../../components/host';
 import Stars from '../../components/stars';
@@ -14,22 +14,47 @@ function House() {
   document.title = 'Kasa - Logement';
 
   const { id } = useParams();
+  const [load, setLoad] =useState(true);
+  const [data, setData] = useState([]);
+  const [error, setError] = useState(false);
 
-  const page = data.find((item) => item.id === id);
+  useEffect(() => {
+    async function fetchData() {
+      try{
+        const response = await fetch('../logements.json');
+        const jsonData = await response.json();
+        setData(jsonData);
+        setLoad(false);
+      } catch {
+        setError(true);
+      }
+    } 
+    fetchData();
+  }, []);
 
-  const tags = page.tags;
-
-  if(!page){
-    return <Notfound />;
+  if (error === true){
+    return null;
   }
 
+  const itemUsed = data.find((item) => item.id === id);
+
+  if (!itemUsed){
+    if(load){
+      return null
+    } else {
+      return <Notfound />
+    }
+  }
+
+  const tags = itemUsed.tags;
+
   return (
-      <div className='house'>
-        <Gallery content={page.pictures} />
+      <div className='house' key={itemUsed.id}>
+        <Gallery content={itemUsed.pictures} />
         <div className='house__content'>
           <div className='house__content__left'>
-            <h2 className='house__content__left__title' >{page.title}</h2>  
-            <p className='house__content__left__location'>{page.location}</p>  
+            <h2 className='house__content__left__title' >{itemUsed.title}</h2>  
+            <p className='house__content__left__location'>{itemUsed.location}</p>  
             <div className='tags'>
               {tags.map((element) => 
                 <Tag content={element}  />
@@ -37,16 +62,16 @@ function House() {
             </div>
           </div>
           <div className='house__content__right'>
-            <Host content={page.host} />
-            <Stars content={page.rating} />
+            <Host content={itemUsed.host} />
+            <Stars content={itemUsed.rating} />
           </div>   
         </div>     
         <div className='house__bottom'>
           <div className='house__bottom__left'>
-          <Collapse title="Description" content={page.description} /> 
+          <Collapse title="Description" content={itemUsed.description} /> 
           </div>
           <div className='house__bottom__right'> 
-          <Collapse title="Equipements" content={page.equipments} />   
+          <Collapse title="Equipements" content={itemUsed.equipments} />   
           </div>              
         </div>   
       </div>
